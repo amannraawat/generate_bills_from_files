@@ -16,9 +16,10 @@ for filepath in filepaths:
     # print(filename)
     
     #adding invoice name and number on the pdf
-    invoice_no = filename.split("-")[0]
-    pdf.set_font(family="Arial", size=16, style="I")
-    pdf.cell(w=50, h=8, txt=f"Invoice No.{invoice_no}", ln=1)
+    month = filename.split("-")[0]
+    month = month.title()
+    pdf.set_font(family="Arial", size=16, style="B")
+    pdf.cell(w=50, h=8, txt=f"Bill For {month}", ln=1)
     
     #adding date on the invoice pdf
     date = filename.split("-")[1]
@@ -32,12 +33,13 @@ for filepath in filepaths:
     
     #adding headers(product_id, name..) from the excel files
     columns_name = list(data.columns)
+    columns_name = [item.replace("_", " ").title() for item in columns_name]
     # print(columns_name)
     pdf.set_font(family="Times", size=10)
     pdf.set_text_color(80,80,80)
     pdf.cell(w=30, h=8, txt=columns_name[0], border=1)
     pdf.cell(w=25, h=8, txt=columns_name[1], border=1)
-    pdf.cell(w=50, h=8, txt=columns_name[2], border=1)
+    pdf.cell(w=60, h=8, txt=columns_name[2], border=1)
     pdf.cell(w=30, h=8, txt=columns_name[3], border=1)
     pdf.cell(w=20, h=8, txt=columns_name[4], border=1, ln=1)
     
@@ -48,7 +50,7 @@ for filepath in filepaths:
         pdf.set_text_color(80,80,80)
         pdf.cell(w=30, h=8, txt=str(row["product_id"]), border=1)
         pdf.cell(w=25, h=8, txt=str(row["product_name"]), border=1)
-        pdf.cell(w=50, h=8, txt=str(row["amount_purchased(in kg/quantity)"]), border=1)
+        pdf.cell(w=60, h=8, txt=str(row["amount_purchased(in kg/quantity)"]), border=1)
         pdf.cell(w=30, h=8, txt=str(row["price(per unit)"]), border=1)
         pdf.cell(w=20, h=8, txt=str(row["total_price"]), border=1, ln=1)
 
