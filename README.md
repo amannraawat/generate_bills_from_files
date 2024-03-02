@@ -4,4 +4,4 @@
 
 <h2>Project Screenshots:</h2>
 
-<img src="[https://photos.fife.usercontent.google.com/pw/AP1GczMBhKS_Kc-X5E435LcZSXuAim0Hn_VceT1pj-vV1IzyqAWYQTir6Nvv=w1509-h726-s-no-gm?authuser=0](https://photos.fife.usercontent.google.com/pw/AP1GczMBhKS_Kc-X5E435LcZSXuAim0Hn_VceT1pj-vV1IzyqAWYQTir6Nvv=w1509-h726-s-no-gm?authuser=0)https://photos.fife.usercontent.google.com/pw/AP1GczMBhKS_Kc-X5E435LcZSXuAim0Hn_VceT1pj-vV1IzyqAWYQTir6Nvv=w1509-h726-s-no-gm?authuser=0" alt="project-screenshot" width="720" height="400/">
+![screenshot](https://github.com/amannraawat/generate_bills_from_files/assets/111896299/ec1e167b-b7e0-48c6-913d-bf5625ccc6a8)
